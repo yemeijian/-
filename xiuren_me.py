@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-response=requests.get("http://xiuren.me")
+response=requests.get("http://xxxx")
 response_text=BeautifulSoup(response.text,"html.parser")
 page_numbers=int(response_text.find_all("a",class_="page-numbers")[-2].text.split(" ")[1])      #拿到网站首页的总页码
 for page_number in range(1,page_numbers+1):
